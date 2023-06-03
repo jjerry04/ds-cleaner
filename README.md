@@ -6,4 +6,5 @@ A cleaner tool for data science projects. DSCleaner will read csv/excel data fil
 standard preprocessing.
 
 
-#LET'S BEGIN
+#LET'S BEGIN the DATA SCIENCE JOURNEY!
+#Yea!
