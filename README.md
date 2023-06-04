@@ -4,7 +4,3 @@ A cleaner tool for data science projects. DSCleaner will read csv/excel data fil
 #Read csv file and present raw data as matrix (mtx) or dataframe
 #Output contains raw data to be used for ML model or 
 standard preprocessing.
-
-
-#LET'S BEGIN the DATA SCIENCE JOURNEY!
-#Yea!
