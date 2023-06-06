@@ -2,13 +2,9 @@
 
 
 import Crud as crud
-import dsUi as ui
+import ui
 
-open = crud.Open()
-create = crud.Create()
-read = crud.Read()
-update = crud.Update()
-delete = crud.Delete()
+open = crud.Read(filename, directory)
 
 
 #Open csv file by reading
