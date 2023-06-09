@@ -1,5 +1,5 @@
 
-from util.IO import IO
+from dscleaner.crud.util.IO import IO
 
 class Create(IO):
     '''
@@ -34,7 +34,7 @@ class Create(IO):
         '''
             Create folder path if path does not exist. 
             Create file with header, if header is true.
-            If data is provided added data to file
+            If data is provided add data to file
         '''
         self._setPath(filename)
         #path = self._getPath()

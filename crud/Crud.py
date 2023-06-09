@@ -1,11 +1,11 @@
 
 import ast
-from create.Create import Create
-from read.Read import Read
-from update.Update import Update
-from delete.Delete import Delete
+from dscleaner.crud.create.Create import Create
+from dscleaner.crud.read.Read import Read
+from dscleaner.crud.update.Update import Update
+from dscleaner.crud.delete.Delete import Delete
 
-class CRUD(Create, Read, Update, Delete):
+class Crud(Create, Read, Update, Delete):
     '''Initialize IO operations.
     Utilize C.R.U.D class for ArkFinance
 
@@ -26,7 +26,7 @@ class CRUD(Create, Read, Update, Delete):
         -TestData.csv
     '''
     def __init__(self):
-        super(CRUD, self).__init__()
+        super(Crud, self).__init__()
         
         #Init dirctory hierarchy
         self.__fPaths = {'category': 'data/category/',
@@ -35,8 +35,11 @@ class CRUD(Create, Read, Update, Delete):
                             'test':'data/test/'}
         self.__fnames = {}
 
+    def setPath(self, dir):
+        self._setPath(dir)
+
     def defaultFile(self):
-        '''file containing crypto data'''
+        '''file containing data'''
         return self.__dir('category', 'data')
     
     def testFile(self):
@@ -49,8 +52,6 @@ class CRUD(Create, Read, Update, Delete):
         for index, category in enumerate(data):
             newData[category] = ast.literal_eval(data[category])
         return newData
-
-        return None
 
     def __dir(self, path, filename):
         '''Create dir using path and filename'''
